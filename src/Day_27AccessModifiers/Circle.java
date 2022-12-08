@@ -1,0 +1,44 @@
+package Day_27AccessModifiers;
+
+public class Circle {
+    public double radius, diameter;
+
+    public static double pi = 3.14;
+
+    public Circle(double radius) {
+        this.radius = radius;
+        diameter = radius * 2;
+    }
+
+
+    /*
+    public static double calcArea(){ // static only accepts statics
+        return radius * radius * pi;
+    }
+    */
+
+    public double calcArea() {
+        return radius * radius * pi;
+    }
+
+    public double calcPerimeter() {
+        return 2 * radius * pi;
+    }
+
+
+    public  static void printPiValue() {
+        System.out.println("PI' value is: " + pi);
+    }
+
+    public String toString() {
+        return "Circle{" +
+                "radius=" + radius +
+                ", diameter=" + diameter +
+                ", PI=" + pi +
+                ", area=" + calcArea() +
+                ", perimeter=" + calcPerimeter() +
+                '}';
+    }
+
+
+}
